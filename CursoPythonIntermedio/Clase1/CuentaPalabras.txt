@@ -1,0 +1,19 @@
+#Cuenta Palabras
+
+import sys
+
+nombreArch=sys.argv[1]
+
+f=open(nombreArch,"r")
+
+totalP=0
+totalC=0
+#read nos regresa cadenas, y readlines, nos regresa lineas
+for linea in f.readlines():
+	#cadena.split()asi quitamos los saltos de linea, nos regresa una lista[]
+	#cadena.strip() este me regresa una cadena " ", ya sin los carcateres especiales
+	#Lo ue ya habia contado anteriormente mas lo contado de este lado
+	totalp+=len(lineas.split())
+	totalp=totalp+len(linea.split())
+	
+
