@@ -51,6 +51,126 @@ def ComoJugar():
 
 	salir=input("Presiona enter para salir")
 
+def ganador(players,player1,player2,marca1,marca2,posic):
+		#########################SI PLAYER1=X
+		if players[player1]=="X":
+			###############HORIZONTALES
+			if posic[0]=="X" and posic[1]=="X" and posic[2]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[3]=="X" and posic[4]=="X" and posic[5]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[6]=="X" and posic[7]=="X" and posic[8]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			##############VERTICALES
+			elif posic[0]=="X" and posic[3]=="X" and posic[6]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[1]=="X" and posic[4]=="X" and posic[7]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[2]=="X" and posic[5]=="X" and posic[8]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			################DIAGONALES
+			elif posic[0]=="X" and posic[4]=="X" and posic[8]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[2]=="X" and posic[4]=="X" and posic[6]=="X":
+				print("¡ ",player1," ha ganado!")
+				return True
+			else:
+				###############HORIZONTALES
+				if players[player2]=="O":
+					if posic[0]=="O" and posic[1]=="O" and posic[2]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[3]=="O" and posic[4]=="O" and posic[5]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[6]=="O" and posic[7]=="O" and posic[8]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					##############VERTICALES
+					elif posic[0]=="O" and posic[3]=="O" and posic[6]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[1]=="O" and posic[4]=="O" and posic[7]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[2]=="O" and posic[5]=="O" and posic[8]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					################DIAGONALES
+					elif posic[0]=="O" and posic[4]=="O" and posic[8]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[2]=="O" and posic[4]=="O" and posic[6]=="O":
+						print("¡ ",player2," ha ganado!")
+						return True
+		####################SI PLAYER1=O
+		elif players[player1]=="O":
+			###############HORIZONTALES
+			if posic[0]=="O" and posic[1]=="O" and posic[2]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+
+			elif posic[3]=="O" and posic[4]=="O" and posic[5]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[6]=="O" and posic[7]=="O" and posic[8]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			##############VERTICALES
+			elif posic[0]=="O" and posic[3]=="O" and posic[6]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[1]=="O" and posic[4]=="O" and posic[7]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[2]=="O" and posic[5]=="O" and posic[8]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			################DIAGONALES
+			elif posic[0]=="O" and posic[4]=="O" and posic[8]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			elif posic[2]=="O" and posic[4]=="O" and posic[6]=="O":
+				print("¡ ",player1," ha ganado!")
+				return True
+			else:
+				###############HORIZONTALES
+				if players[player2]=="X":
+					if posic[0]=="X" and posic[1]=="X" and posic[2]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[3]=="X" and posic[4]=="X" and posic[5]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[6]=="X" and posic[7]=="X" and posic[8]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					##############VERTICALES
+					elif posic[0]=="X" and posic[3]=="X" and posic[6]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[1]=="X" and posic[4]=="X" and posic[7]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[2]=="X" and posic[5]=="X" and posic[8]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					################DIAGONALES
+					elif posic[0]=="X" and posic[4]=="X" and posic[8]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+					elif posic[2]=="X" and posic[4]=="X" and posic[6]=="X":
+						print("¡ ",player2," ha ganado!")
+						return True
+
+
 while True:
 	try:
 		print(r'''				                                                                 
@@ -67,9 +187,8 @@ while True:
 
 		print("""
 			    1.-Jugar
-			    2.-Ver último ganador
-			    3.-¿Cómo jugar?
-			    4.-Salir \n\n""")
+			    2.-¿Cómo jugar?
+			    3.-Salir \n\n""")
 		opcion=int(input("Selecciona la opción que desees: "))
 		os.system("clear")
 		if opcion==1:
@@ -81,257 +200,203 @@ while True:
 			player2=input("\n\tIngresa el nombre del jugador 2: ")
 			os.system("clear")
 			if marca1=="X" or marca1=="x":
+				marca1=marca1.upper()
 				marca2="O" 
 			elif marca1=="O" or marca1=="o":
-				marca2="X" 
+				marca2="X"
+				marca2=marca2.upper()
+			else:
+				print("No es una marca válida!")
+				break
 			players[player1]=marca1
 			players[player2]=marca2
-			print(players)
+			#print(players)
 			tableroInicial(" ")
-			while True:	
-				print("\n\t\t\t",player1,"es: ",marca1,"\t",player2,"es: ",marca2)
+			##############################INICIO DEL JUEGO################
+			while True:
+				print("\n\t\t\t\t\t\t",player1,"es: ",marca1,"\t",player2,"es: ",marca2)
 				print(player1)
-				posicion=int(input("Ingresa tu posición: "))
-				os.system("clear")
-				print("\n\t\t\t",player1,"es: ",marca1,"\t",player2,"es: ",marca2)
-				if posicion==1:
-					if posic[0]=="X" or posic[0]=="x" or posic[0]=="O" or posic[0]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[0]=marca1
-						os.system("clear")
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==2:
-					if posic[1]=="X" or posic[1]=="x" or posic[1]=="O" or posic[1]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[1]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==3:
-					if posic[2]=="X" or posic[2]=="x" or posic[2]=="O" or posic[2]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[2]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==4:
-					if posic[3]=="X" or posic[3]=="x" or posic[3]=="O" or posic[3]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[3]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==5:
-					if posic[4]=="X" or posic[4]=="x" or posic[4]=="O" or posic[4]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[4]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==6:
-					if posic[5]=="X" or posic[5]=="x" or posic[5]=="O" or posic[5]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[5]=marca1
-						os.system("clear")	
-						print(player1," tiró: ")
-				elif posicion==7:
-					if posic[6]=="X" or posic[6]=="x" or posic[6]=="O" or posic[6]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[6]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==8:
-					if posic[7]=="X" or posic[7]=="x" or posic[7]=="O" or posic[7]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[7]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
-				elif posicion==9:
-					if posic[8]=="X" or posic[8]=="x" or posic[8]=="O" or posic[8]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[8]=marca1
-						os.system("clear")
-						print(player1," tiró: ")
+				termina=ganador(players,player1,player2,marca1,marca2,posic)	
+				if termina==True:
+					break
 				else:
-					print("Posición incorrecta!")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t  ",posic[0],"    |    ",posic[1],"   |    ",posic[2],"      ")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t---------+----------+-----------")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t  ",posic[3],"    |    ",posic[4],"   |    ",posic[5],"      ")  
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t---------+----------+-----------")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t  ",posic[6],"    |    ",posic[7],"   |    ",posic[8],"      ") 
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print(player2)
-				posicion=int(input("Ingresa tu posición: "))
-				os.system("clear")
-				print("\n\t\t\t",player1,"es: ",marca1,"\t",player2,"es: ",marca2)
-				if posicion==1:
-					if posic[0]=="X" or posic[0]=="x" or posic[0]=="O" or posic[0]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
+					posicion=int(input("Ingresa tu posición: "))
+					os.system("clear")
+					print("\n\t\t\t",player1,"es: ",marca1,"\t",player2,"es: ",marca2)
+					if posicion==1:
+						if posic[0]=="X" or posic[0]=="x" or posic[0]=="O" or posic[0]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[0]=marca1
+							os.system("clear")
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==2:
+						if posic[1]=="X" or posic[1]=="x" or posic[1]=="O" or posic[1]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[1]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==3:
+						if posic[2]=="X" or posic[2]=="x" or posic[2]=="O" or posic[2]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[2]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==4:
+						if posic[3]=="X" or posic[3]=="x" or posic[3]=="O" or posic[3]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[3]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==5:
+						if posic[4]=="X" or posic[4]=="x" or posic[4]=="O" or posic[4]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[4]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==6:
+						if posic[5]=="X" or posic[5]=="x" or posic[5]=="O" or posic[5]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[5]=marca1
+							os.system("clear")	
+							print(player1," tiró: ")
+					elif posicion==7:
+						if posic[6]=="X" or posic[6]=="x" or posic[6]=="O" or posic[6]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[6]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==8:
+						if posic[7]=="X" or posic[7]=="x" or posic[7]=="O" or posic[7]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[7]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
+					elif posicion==9:
+						if posic[8]=="X" or posic[8]=="x" or posic[8]=="O" or posic[8]=="o":
+							print("Ya esta ocupado ese lugar, pierdes un turno!")
+						else:
+							posic[8]=marca1
+							os.system("clear")
+							print(player1," tiró: ")
 					else:
-						posic[0]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==2:
-					if posic[1]=="X" or posic[1]=="x" or posic[1]=="O" or posic[1]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
+						print("Posición incorrecta!")
+					print("\t\t\t\t\t\t\t         |          |          ")
+					print("\t\t\t\t\t\t\t  ",posic[0],"    |    ",posic[1],"   |    ",posic[2],"      ")
+					print("\t\t\t\t\t\t\t         |          |          ")
+					print("\t\t\t\t\t\t\t---------+----------+-----------")
+					print("\t\t\t\t\t\t\t         |          |          ")
+					print("\t\t\t\t\t\t\t  ",posic[3],"    |    ",posic[4],"   |    ",posic[5],"      ")  
+					print("\t\t\t\t\t\t\t         |          |          ")
+					print("\t\t\t\t\t\t\t---------+----------+-----------")
+					print("\t\t\t\t\t\t\t         |          |          ")
+					print("\t\t\t\t\t\t\t  ",posic[6],"    |    ",posic[7],"   |    ",posic[8],"      ") 
+					print("\t\t\t\t\t\t\t         |          |          ")
+					if posic[0]!=" " and posic[1]!=" " and posic[2]!=" " and posic[3]!=" " and posic[4]!=" " and posic[5]!=" " and posic[6]!=" " and posic[7]!=" " and posic[8]!=" ":
+						print("¡Empate, nadie gana!")
+						break
 					else:
-						posic[1]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==3:
-					if posic[2]=="X" or posic[2]=="x" or posic[2]=="O" or posic[2]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[2]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==4:
-					if posic[3]=="X" or posic[3]=="x" or posic[3]=="O" or posic[3]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[3]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==5:
-					if posic[4]=="X" or posic[4]=="x" or posic[4]=="O" or posic[4]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[4]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==6:
-					if posic[5]=="X" or posic[5]=="x" or posic[5]=="O" or posic[5]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[5]=marca2
-						os.system("clear")	
-						print(player2," tiró: ")
-				elif posicion==7:
-					if posic[6]=="X" or posic[6]=="x" or posic[6]=="O" or posic[6]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[6]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==8:
-					if posic[7]=="X" or posic[7]=="x" or posic[7]=="O" or posic[7]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[7]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				elif posicion==9:
-					if posic[8]=="X" or posic[8]=="x" or posic[8]=="O" or posic[8]=="o":
-						print("Ya esta ocupado ese lugar, pierdes un turno!")
-					else:
-						posic[8]=marca2
-						os.system("clear")
-						print(player2," tiró: ")
-				else:
-					print("Posición incorrecta!")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t  ",posic[0],"    |    ",posic[1],"   |    ",posic[2],"      ")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t --------+----------+-----------")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t  ",posic[3],"    |    ",posic[4],"   |    ",posic[5],"      ")  
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t---------+----------+-----------")
-				print("\t\t\t\t\t\t\t         |          |          ")
-				print("\t\t\t\t\t\t\t  ",posic[6],"    |    ",posic[7],"   |    ",posic[8],"      ") 
-				print("\t\t\t\t\t\t\t         |          |          ")
-				
+						termina2=ganador(players,player1,player2,marca1,marca2,posic)	
+						if termina2==True:
+							break
+						else:
+							print(player2)
+							posicion=int(input("Ingresa tu posición: "))
+							os.system("clear")
+							print("\n\t\t\t",player1,"es: ",marca1,"\t",player2,"es: ",marca2)
+							if posicion==1:
+								if posic[0]=="X" or posic[0]=="x" or posic[0]=="O" or posic[0]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[0]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==2:
+								if posic[1]=="X" or posic[1]=="x" or posic[1]=="O" or posic[1]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[1]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==3:
+								if posic[2]=="X" or posic[2]=="x" or posic[2]=="O" or posic[2]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[2]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==4:
+								if posic[3]=="X" or posic[3]=="x" or posic[3]=="O" or posic[3]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[3]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==5:
+								if posic[4]=="X" or posic[4]=="x" or posic[4]=="O" or posic[4]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[4]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==6:
+								if posic[5]=="X" or posic[5]=="x" or posic[5]=="O" or posic[5]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[5]=marca2
+									os.system("clear")	
+									print(player2," tiró: ")
+							elif posicion==7:
+								if posic[6]=="X" or posic[6]=="x" or posic[6]=="O" or posic[6]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[6]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==8:
+								if posic[7]=="X" or posic[7]=="x" or posic[7]=="O" or posic[7]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[7]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							elif posicion==9:
+								if posic[8]=="X" or posic[8]=="x" or posic[8]=="O" or posic[8]=="o":
+									print("Ya esta ocupado ese lugar, pierdes un turno!")
+								else:
+									posic[8]=marca2
+									os.system("clear")
+									print(player2," tiró: ")
+							else:
+								print("Posición incorrecta!")
+							print("\t\t\t\t\t\t\t         |          |          ")
+							print("\t\t\t\t\t\t\t  ",posic[0],"    |    ",posic[1],"   |    ",posic[2],"      ")
+							print("\t\t\t\t\t\t\t         |          |          ")
+							print("\t\t\t\t\t\t\t --------+----------+-----------")
+							print("\t\t\t\t\t\t\t         |          |          ")
+							print("\t\t\t\t\t\t\t  ",posic[3],"    |    ",posic[4],"   |    ",posic[5],"      ")  
+							print("\t\t\t\t\t\t\t         |          |          ")
+							print("\t\t\t\t\t\t\t---------+----------+-----------")
+							print("\t\t\t\t\t\t\t         |          |          ")
+							print("\t\t\t\t\t\t\t  ",posic[6],"    |    ",posic[7],"   |    ",posic[8],"      ") 
+							print("\t\t\t\t\t\t\t         |          |          ")
+							
 				#Posibilidades de ganar:
 				
-
-				if posic[0]==posic[3] and posic[3]==posic[6] and posic[0]==posic[6]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[1]==posic[4] and posic[4]==posic[7] and posic[1]==posic[7]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[2]==posic[5] and posic[5]==posic[8] and posic[2]==posic[8]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[6]==posic[7] and posic[7]==posic[8] and posic[6]==posic[8]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[3]==posic[4] and posic[4]==posic[5] and posic[3]==posic[5]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[0]==posic[1] and posic[1]==posic[2] and posic[0]==posic[2]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[0]==posic[4] and posic[4]==posic[8] and posic[0]==posic[8]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-
-				elif posic[6]==posic[4] and posic[4]==posic[2] and posic[6]==posic[2]:
-					if players[player1]=="X" or players[player1]=="x":
-						print("\n\n\t¡",player1," ha ganado!")
-						
-					elif players[player1]=="O" or players[player1]=="o":
-						print("\n\t\t¡",player1," ha ganado!")
-					else:
-						print("\n\n\t¡",player2," ha ganado!")
-				else:
-					pass
-
-
-
-
+					
+			#print(posic)	
 		elif opcion==2:
 			os.system("clear")
-			pass
-		elif opcion==3:
-			os.system("clear")
 			ComoJugar()
-		elif opcion==4:
+		elif opcion==3:
 			os.system("clear")
 			print("Regresa Pronto :) ")
 			break
