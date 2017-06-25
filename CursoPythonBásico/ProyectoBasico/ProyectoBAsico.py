@@ -1,4 +1,8 @@
 #-*-coding:utf-8-*-
+import os
+from calcComplejos import Complejos
+from calcPoli import calcPol
+from Gato import Gatuno
 print("*********************Proyecto del Curso Basico de Python****************")
 
 while True:
@@ -12,13 +16,13 @@ while True:
 
 		if opcionMenu==1:
 			os.system("clear")
-			pass
+			Complejos()
 		elif opcionMenu==2:
 			os.system("clear")
-			pass
+			calcPol()
 		elif opcionMenu==3:
 			os.system("clear")
-			pass
+			Gatuno()
 		elif opcionMenu==0:
 			print("****************** Adios :) *********************")
 			break
