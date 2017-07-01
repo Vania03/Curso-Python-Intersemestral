@@ -1,0 +1,15 @@
+Principales Instrucciones SQL
+
+Select -> Nos permite seleccionar regitros y columna de una tabla o mas.
+
+ej: select * FROM alumos #Select(lo que queramos obtener) FROM (De donde lo queremos)
+	select nombre, #cuenta from alumnos #Select(lo que queramos obtener) FROM (De donde lo queremos)
+	select * from alumnos where carrera ="Computacion" #Select(lo que queramos obtener) WHERE (Registro que queremos obtener a partir del atributo especificado)
+
+Insert -> permite insertar un registro en una tabla 
+ej:INSERT INTO alumnos VALUES ("313127612", "INGENIERIA", "JORGE") #INSERT INTO (nombre de la tabla) VALUES (*Aqui va entre parentesis: los elementos que queremos ingresar)
+
+	INSERT INTO alumnos (#cuenta, nombre) VALUES ("32376765","Nombre")#En el caso que no requerimos insertar en todos los campos
+
+Delate -> Permite modificar los datos de un tabla
+ej: DELATE FROM alumnos WHERE
