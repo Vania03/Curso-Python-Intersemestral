@@ -35,7 +35,8 @@ ventana.geometry("250x250")
 
 ventana.mainloop()"""
 
-
+v.geometry("500x600")
+v.resizable(False,False)
 ButtonI=Button(v,text="Estoy en la izquierda").place(x=10,y=10)
 ButtonD=Button(v,text="Estoy en la derecha").place(x=165,y=10)
 
