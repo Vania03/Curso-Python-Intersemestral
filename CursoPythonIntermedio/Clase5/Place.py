@@ -3,9 +3,9 @@
 #Place()
 from tkinter import *
 
-v=Tk()
+#v=Tk()
 
-"""ventana=Tk()
+ventana=Tk()
 
 label1=Label(ventana,text="Fisica")
 label1.place(x=10,y=10)
@@ -33,11 +33,11 @@ boton.place(x=100,y=100)
 
 ventana.geometry("250x250")
 
-ventana.mainloop()"""
+ventana.mainloop()
 
-
+"""
 ButtonI=Button(v,text="Estoy en la izquierda").place(x=10,y=10)
 ButtonD=Button(v,text="Estoy en la derecha").place(x=165,y=10)
 
 	
-v.mainloop()
+v.mainloop()"""

@@ -2,8 +2,9 @@
 #
 import socket
 #Definimos el objeto
+recvIP=input("Ingresa la IP a la que te quieres conectar: ")
 s=socket.socket()
-s.connect(("localhost",9000))
+s.connect((recvIP,9001))
 
 while True:
 #mandamos el mensaje
